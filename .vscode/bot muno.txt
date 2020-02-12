@@ -1,0 +1,22 @@
+bot_token = "Njc3MDkwODQ5MTI0OTA5MDU2.XkQdEA.7hjRtjzeenZ4KvBPdDmHuk_2tS8"
+
+import discord
+client =discord.client()
+
+@client.event
+async def on ready():
+print('Logged in as')
+print('桃李 :', client.user.name)
+print('677090849124909056:', client.user.id)
+print('------')
+
+@client.event
+async def on_message(message):
+
+if client.user == message.author:
+return
+
+if message.content.startswith("!こんにちは")
+await client.send_message(message.channel, 'こんにちは！')
+
+client.run(bot_token)
